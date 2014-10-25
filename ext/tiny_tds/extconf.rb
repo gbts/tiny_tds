@@ -94,7 +94,7 @@ end
 asplode 'libiconv' unless have_func('iconv_open', 'iconv.h') || have_library('iconv', 'iconv_open', 'iconv.h')
 asplode 'freetds'  unless have_header('sybfront.h') && have_header('sybdb.h')
 
-asplode 'freetds'  unless find_library("#{lib_prefix}sybdb", 'tdsdbopen')
+asplode 'freetds'  unless find_library("#{lib_prefix}sybdb", 'dbopen')
 asplode 'freetds'  unless find_library("#{lib_prefix}ct",    'ct_bind')
 
 create_makefile('tiny_tds/tiny_tds')
